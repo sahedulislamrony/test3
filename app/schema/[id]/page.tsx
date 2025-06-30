@@ -18,16 +18,6 @@ import { SchemaVisualizerWrapper } from '@/components/database/schema-visualizer
 import { DataViewer } from '@/components/database/data-viewer';
 import { DatabaseSchema } from '@/lib/database-parser';
 
-export async function generateStaticParams() {
-  // Since schema IDs are generated dynamically and stored in localStorage
-  // (which is client-side), we cannot pre-render specific IDs at build time.
-  // Returning an empty array means Next.js will not generate static HTML
-  // for any specific [id] paths.
-  // Pages will be rendered client-side when navigated to, or result in a 404
-  // if accessed directly without client-side routing.
-  return [];
-}
-
 export default function SchemaPage() {
   const params = useParams();
   const router = useRouter();
