@@ -18,13 +18,6 @@ import { SchemaVisualizerWrapper } from '@/components/database/schema-visualizer
 import { DataViewer } from '@/components/database/data-viewer';
 import { DatabaseSchema } from '@/lib/database-parser';
 
-// Required for static export with dynamic routes
-export async function generateStaticParams() {
-  // Since schema IDs are dynamically generated and stored in localStorage,
-  // they cannot be known at build time. Return empty array for static export.
-  return [];
-}
-
 export default function SchemaPage() {
   const params = useParams();
   const router = useRouter();
